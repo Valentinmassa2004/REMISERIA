@@ -89,6 +89,7 @@ namespace REMISERIA
             this.Controls.Add(this.label1);
             this.Name = "Form8";
             this.Text = "Form8";
+            this.Load += new System.EventHandler(this.Form8_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
