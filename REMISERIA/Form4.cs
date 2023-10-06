@@ -16,10 +16,26 @@ namespace REMISERIA
         {
             InitializeComponent();
         }
+        Viajes viaje;
+        DataTable tViajes;
+        Chofer oChofer;
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            Grilla.Rows.Clear();
+            DateTime desde = Convert.ToDateTime(dtpDesde.Text);
+            DateTime hasta = Convert.ToDateTime(dtpHasta.Text);
 
+            foreach (DataRow datos in tViajes.Rows)
+            {
+                if (Convert.ToDateTime(datos["fecha"]) >= desde && Convert.ToDateTime(datos["fecha"]) <= hasta)
+                {
+                    string chofer = oChofer.getNombre(int.Parse(datos["chofer"].ToString()));
+                    DateTime fecha = Convert.ToDateTime(datos["fecha"]);
+                    Grilla.Rows.Add(datos["viaje"], fecha.ToString("dd/MM/yyyy"), chofer, datos["importe"]);
+                }
+            }
         }
+
     }
 }

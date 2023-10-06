@@ -56,6 +56,7 @@ namespace REMISERIA
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(167, 394);
             this.listBox1.TabIndex = 1;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -116,6 +117,7 @@ namespace REMISERIA
             this.Controls.Add(this.label1);
             this.Name = "Form5";
             this.Text = "Form5";
+            this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

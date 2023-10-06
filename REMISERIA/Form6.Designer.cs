@@ -30,8 +30,8 @@ namespace REMISERIA
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbDestino = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +42,7 @@ namespace REMISERIA
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.rdbDestino);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -50,6 +50,17 @@ namespace REMISERIA
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BARRIO";
+            // 
+            // rdbDestino
+            // 
+            this.rdbDestino.AutoSize = true;
+            this.rdbDestino.Location = new System.Drawing.Point(167, 48);
+            this.rdbDestino.Name = "rdbDestino";
+            this.rdbDestino.Size = new System.Drawing.Size(73, 17);
+            this.rdbDestino.TabIndex = 1;
+            this.rdbDestino.TabStop = true;
+            this.rdbDestino.Text = "DESTINO";
+            this.rdbDestino.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
@@ -63,17 +74,6 @@ namespace REMISERIA
             this.radioButton1.Text = "ORIGEN";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(167, 48);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(73, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "DESTINO";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(348, 42);
@@ -82,6 +82,7 @@ namespace REMISERIA
             this.button1.TabIndex = 1;
             this.button1.Text = "CONSULTAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -121,6 +122,7 @@ namespace REMISERIA
             this.Controls.Add(this.groupBox1);
             this.Name = "Form6";
             this.Text = "Form6";
+            this.Load += new System.EventHandler(this.Form6_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -131,7 +133,7 @@ namespace REMISERIA
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdbDestino;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
